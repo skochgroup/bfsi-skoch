@@ -12,7 +12,7 @@
 /* Root Settings
 -----------------------------------------------------------------*/
 :root {
-	--themecolor:  #d2a87b;
+	--themecolor:  #d01257;
 	--themecolorrgb: 198,192,156;
 	--header-height: 70px;
 }
@@ -920,4 +920,9 @@ body:not(.device-touch) .awardees-grid .grid-item a {
 	left: 0;
 	bottom: -1px;
 	border-bottom: 1px dashed #DDD;
+}
+
+
+.card-body:hover {
+	color: #FFF;
 }

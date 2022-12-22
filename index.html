@@ -106,6 +106,66 @@
 	<!-- Document Title
 	============================================= -->
 	<title>SKOCH Kuber Award</title>
+	<style>
+
+		.block-expand-categories h1,
+		.block-expand-categories h2,
+		.block-expand-categories h3 { font-family: Playfair Display, serif !important; }
+
+		.block-expand-categories .expand-category {
+			--height: 50vh;
+			--responsive-height: 60px;
+			--hover-flex: 10;
+
+			position: relative;
+			background-position: center center;
+			background-size: cover;
+			border-radius: 20px;
+			margin: 10px 0;
+			min-height: var(--responsive-height);
+			cursor: pointer;
+		}
+
+		.block-expand-categories .expand-category h4 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			margin: 0;
+			transform: translateY(-50%);
+		}
+
+		/* Larger Device */
+		@media (min-width: 992px) {
+
+			.block-expand-categories .expand-category {
+				height: var(--height);
+				flex: 1;
+				margin: 0 10px;
+				transition: flex 1s ease;
+				-webkit-backface-visibility: hidden;
+				transform: translate3d(0,0,0);
+			}
+
+			.block-expand-categories:not(.on-click) .expand-category:hover,
+			.block-expand-categories.on-click .expand-category.active { flex: var(--hover-flex); }
+
+			.block-expand-categories .expand-category h4 {
+				opacity: 1;
+				top: auto;
+				bottom: 10px;
+				transform: none;
+				transition: opacity .4s ease;
+			}
+
+			.block-expand-categories:hover .expand-category:not(.active):not(:hover) h4,
+			.block-expand-categories.on-click .expand-category:not(.active) h4 { opacity: 0; }
+
+		}
+
+
+	</style>
 
 </head>
 
@@ -248,7 +308,7 @@
 								<a href="/award/apply" class="card center border-start-0 border-end-0 border-top-0 border-bottom border-bottom shadow py-3 rounded-0 fw-semibold text-uppercase ls1">
 									<div class="card-body">
 										<i class="icon-line-check-circle"></i>Apply for Kuber Award
-                                    </div>
+              		</div>
 								</a>
 							</div>
 							<div class="col-md-4 px-1">
@@ -277,11 +337,11 @@
 								</div> -->
 								<p>SKOCH Group is uniquely positioned to apply both academic as well as practical rigour in	evaluating financial sector products and services. This expertise stems from decades of field inputs, research and impactful policy interventions.</p>
 								<p>Nominations are invited for SKOCH Kuber Award for exceptional / innovative products, achievements and corporate contributions to Banking, Finance, Securities and Insurance. Evaluations would be by a Jury to identify products, services and organisations to take note of, learn from and replicate.</p>
-								<h3>How to <span class="text-rotater" data-separator="|" data-rotate="fadeIn" data-speed="2000"><span class="t-rotate" style="color:#d2a87b;">apply for|particpate in|win </span> SKOCH Kuber Award?</h3>
-								<p><strong>Early Bird: 28th November 2022, Last Date: 15th December 2022</strong></p>
+								<h3>How to <span class="text-rotater" data-separator="|" data-rotate="fadeIn" data-speed="2000"><span class="t-rotate" style="color:#d01257;">apply for|particpate in|win </span> SKOCH Kuber Award?</h3>
+								<p><strong>Early Bird: 30th December 2022, Last Date: 16th January 2023</strong></p>
 							</div>
 
-                            <div class="col-sm-6 col-lg-3 col-6">
+              <div class="col-sm-6 col-lg-3 col-6">
 								<div class="feature-box fbox-center fbox-bg fbox-border fbox-effect">
 									<div class="fbox-icon">
 										<a href="/award/apply"><i class="i-alt">1</i></a>
@@ -326,110 +386,129 @@
 				</div>
 				
 				<div class="container">
+
 				
-                    <div class="section bg-transparent" style="padding: 40px 0">
-                        <div class="container clearfix">
-                            <div class="row justify-content-center">
-                                <div class="col-md-12 center">
-                                    <div class="heading-block border-bottom-0 mb-4">
-                                        <h2 class="mb-4 nott">Past SKOCH Awardees<sup>*</sup></h2>
-                                    </div>
-                                    <div class="svg-line bottommargin-sm clearfix">
-                                        <img src="/images/divider-1.svg" alt="svg divider" height="15">
-                                    </div>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, quasi, dolorum blanditiis eius laboriosam, quidem temporibus, dolor quod voluptatum perferendis ullam. Odio sequi at dolore consequatur ad, odit expedita tenetur.</p> -->
-                                </div>
-                                
-                                <div class="col-md-11 my-3">
-                                    <div class="grid-filter-wrap justify-content-center">
-                                        <ul class="grid-filter style-2 customjs">
-                                            <li class="activeFilter"><a href="#" data-filter=".all">All</a></li>
-                                            <li><a href="#" data-filter=".awardee-banks-public">Public Sector Banks</a></li>
-                                            <li><a href="#" data-filter=".awardee-banks-private">Private Sector Banks</a></li>
-                                            <li><a href="#" data-filter=".awardee-fintech">FinTech</a></li>
-                                            <li><a href="#" data-filter=".awardee-exchanges">Exchanges</a></li>
-                                            <li><a href="#" data-filter=".awardee-financial-services">Financial Services</a></li>
-                                            <li><a href="#" data-filter=".awardee-insurance">Insurance</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clear"></div>
-                                    <div id="awardees" class="awardees">
-                                        <div class="toggle awardee awardee-banks-public">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/state-bank-of-india.png" alt="State Bank of India"></li>
-                                                <li class="grid-item"><img src="/images/awardees/punjab-national-bank.png" alt="Punjab National Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/union-bank-of-india.png" alt="Union Bank of India"></li>
-                                                <li class="grid-item"><img src="/images/awardees/bank-of-baroda.png" alt="Bank of Baroda"></li>
-                                                <li class="grid-item"><img src="/images/awardees/bank-of-maharashtra.png" alt="Bank of Maharashtra"></li>
-                                                <li class="grid-item"><img src="/images/awardees/indian-bank.png" alt="Indian Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/allahabad-bank.png" alt="Allahabad Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/united-bank-of-india.png" alt="United Bank of India"></li>
-                                                <li class="grid-item"><img src="/images/awardees/vijaya-bank.png" alt="Vijaya Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/syndicate-bank.png" alt="Syndicate Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/karnataka-vikas-grameena-bank.png" alt="Karnataka Vikas Grameena Bank"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="toggle awardee awardee-banks-private">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/icici-bank.png" alt="ICICI Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/idfc-bank.png" alt="IDFC First Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/yes-bank.png" alt="YES Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/the-federal-bank.png" alt="Federal Bank"></li>
-                                                <li class="grid-item"><img src="/images/awardees/bajaj-finserv.png" alt="Bajaj Finserv"></li>
-                                                <li class="grid-item"><img src="/images/awardees/idbi-bank.png" alt="IDBI Bank"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="toggle awardee awardee-fintech">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/sbi-card.png" alt="SBI Card"></li>
-												<li class="grid-item"><img src="/images/awardees/razorpay.png" alt="RazorPay"></li>
-                                                <li class="grid-item"><img src="/images/awardees/uae-exchange.png" alt="UAE Exchange"></li>
-                                                <li class="grid-item"><img src="/images/awardees/aditya-birla-capital.png" alt="Aditya Birla Capital"></li>
-                                                <li class="grid-item"><img src="/images/awardees/infibeam-avenues.png" alt="Infibeam Avenues"></li>
-                                                <li class="grid-item"><img src="/images/awardees/bajaj-finserv.png" alt="Bajaj Finserv"></li>
-                                                <li class="grid-item"><img src="/images/awardees/scripbox.png" alt="Scripbox"></li>
-                                                <li class="grid-item"><img src="/images/awardees/oxigen.png" alt="Oxigen"></li>
-                                                <li class="grid-item"><img src="/images/awardees/suvidhaa.png" alt="Suvidhaa"></li>
-                                                <li class="grid-item"><img src="/images/awardees/hitachi.png" alt="Hitachi"></li>
-                                                <li class="grid-item"><img src="/images/awardees/itz-cash.png" alt="Itz Cash"></li>
-                                                <li class="grid-item"><img src="/images/awardees/ujjivan-financial-services.png" alt="Ujjivan Financial Service Private Limited"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="toggle awardee awardee-exchanges">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/bse.png" alt="BSE Limited"></li>
-                                                <li class="grid-item"><img src="/images/awardees/nse.png" alt="NSE Limited"></li>
-                                                <li class="grid-item"><img src="/images/awardees/nsdl.png" alt="NSD Limited"></li>
-                                                <li class="grid-item"><img src="/images/awardees/mcx.png" alt="MCX Limited"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="toggle awardee awardee-financial-services">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/npci.png" alt="National Payments Corporation of India (NPCI)"></li>
-                                                <li class="grid-item"><img src="/images/awardees/mahindra-home-finance.png" alt="Mahindra Rural Housing Finance Limited"></li>
-                                                <li class="grid-item"><img src="/images/awardees/reliance-capital.png" alt="Reliance Capital Asset Management"></li>
-												<li class="grid-item"><img src="/images/awardees/religare.png" alt="Religare Health Insurance"></li>
-                                                <li class="grid-item"><img src="/images/awardees/indiabulls.png" alt="Indiabulls Housing Finance Limited"></li>
-                                                <li class="grid-item"><img src="/images/awardees/srg-housing-finance.png" alt="SRG Housing Finance Ltd"></li>
-                                                <li class="grid-item"><img src="/images/awardees/yes-securities.png" alt="Yes Securities"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="toggle awardee awardee-insurance">
-                                            <ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
-                                                <li class="grid-item"><img src="/images/awardees/sbi-life-insurance.png" alt="SBI Life Insurance"></li>
-                                                <li class="grid-item"><img src="/images/awardees/lic.png" alt="Life Insurance Corporation of India"></li>
-                                                <li class="grid-item"><img src="/images/awardees/reliance-insurance.png" alt="Reliance Insurance"></li>
-                                                <li class="grid-item"><img src="/images/awardees/hdfc-ergo.png" alt="HDFC Ergo Life Insurance"></li>
-                                                <li class="grid-item"><img src="/images/awardees/aditya-birla-health.png" alt="Aditya Birla Health Insurance Company"></li>
-                                                <li class="grid-item"><img src="/images/awardees/go-digit.png" alt="Go Digital General Insurance"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5 class="fw-normal text-black-50 mb-0">* These are some of the past awardees. Full list can be viewed at <a href="https://award.skoch.in/past-awards/"><u>Past SKOCH Awards</u></a> page.</h5>
-                            </div>
-                        </div>
-                    </div>
+				<div class="section bg-transparent mb-4">
+					<div class="container clearfix">
+						<div class="row justify-content-center">
+							<div class="col-md-16 center">
+								<div class="heading-block border-bottom-0 mb-4">
+									<h2 class="mb-4 nott">Financial Inclusion Task Force</h2>
+								</div>
+								<div class="svg-line bottommargin-sm clearfix">
+									<img src="/images/divider-1.svg" alt="svg divider" height="20">
+								</div>
+								<p>It has been 14 years since the Rangarajan Committee submitted its report on Financial Inclusion. The report said that opening bank accounts must follow access to finance by the poor, which is a prerequisite for financial inclusion and poverty reduction.</p>
+								<p>Modi government has laid the necessary infrastructure and groundwork to make this happen. To accelerate the mission of financial inclusion, we have formed a <strong>Financial Inclusion Task Force (FITF)</strong> under the aegis of the SKOCH Development Foundation and the CEO's Association for Inclusive Growth (CAII).</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+					<div class="section bg-transparent" style="padding: 40px 0">
+							<div class="container clearfix">
+									<div class="row justify-content-center">
+											<div class="col-md-12 center">
+													<div class="heading-block border-bottom-0 mb-4">
+															<h2 class="mb-4 nott">Past SKOCH Awardees<sup>*</sup></h2>
+													</div>
+													<div class="svg-line bottommargin-sm clearfix">
+															<img src="/images/divider-1.svg" alt="svg divider" height="15">
+													</div>
+													<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, quasi, dolorum blanditiis eius laboriosam, quidem temporibus, dolor quod voluptatum perferendis ullam. Odio sequi at dolore consequatur ad, odit expedita tenetur.</p> -->
+											</div>
+											
+											<div class="col-md-11 my-3">
+													<div class="grid-filter-wrap justify-content-center">
+															<ul class="grid-filter style-2 customjs">
+																	<li class="activeFilter"><a href="#" data-filter=".all">All</a></li>
+																	<li><a href="#" data-filter=".awardee-banks-public">Public Sector Banks</a></li>
+																	<li><a href="#" data-filter=".awardee-banks-private">Private Sector Banks</a></li>
+																	<li><a href="#" data-filter=".awardee-fintech">FinTech</a></li>
+																	<li><a href="#" data-filter=".awardee-exchanges">Exchanges</a></li>
+																	<li><a href="#" data-filter=".awardee-financial-services">Financial Services</a></li>
+																	<li><a href="#" data-filter=".awardee-insurance">Insurance</a></li>
+															</ul>
+													</div>
+													<div class="clear"></div>
+													<div id="awardees" class="awardees">
+															<div class="toggle awardee awardee-banks-public">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/state-bank-of-india.png" alt="State Bank of India"></li>
+																			<li class="grid-item"><img src="/images/awardees/punjab-national-bank.png" alt="Punjab National Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/union-bank-of-india.png" alt="Union Bank of India"></li>
+																			<li class="grid-item"><img src="/images/awardees/bank-of-baroda.png" alt="Bank of Baroda"></li>
+																			<li class="grid-item"><img src="/images/awardees/bank-of-maharashtra.png" alt="Bank of Maharashtra"></li>
+																			<li class="grid-item"><img src="/images/awardees/indian-bank.png" alt="Indian Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/allahabad-bank.png" alt="Allahabad Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/united-bank-of-india.png" alt="United Bank of India"></li>
+																			<li class="grid-item"><img src="/images/awardees/vijaya-bank.png" alt="Vijaya Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/syndicate-bank.png" alt="Syndicate Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/karnataka-vikas-grameena-bank.png" alt="Karnataka Vikas Grameena Bank"></li>
+																	</ul>
+															</div>
+															<div class="toggle awardee awardee-banks-private">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/icici-bank.png" alt="ICICI Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/idfc-bank.png" alt="IDFC First Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/yes-bank.png" alt="YES Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/the-federal-bank.png" alt="Federal Bank"></li>
+																			<li class="grid-item"><img src="/images/awardees/bajaj-finserv.png" alt="Bajaj Finserv"></li>
+																			<li class="grid-item"><img src="/images/awardees/idbi-bank.png" alt="IDBI Bank"></li>
+																	</ul>
+															</div>
+															<div class="toggle awardee awardee-fintech">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/sbi-card.png" alt="SBI Card"></li>
+							<li class="grid-item"><img src="/images/awardees/razorpay.png" alt="RazorPay"></li>
+																			<li class="grid-item"><img src="/images/awardees/uae-exchange.png" alt="UAE Exchange"></li>
+																			<li class="grid-item"><img src="/images/awardees/aditya-birla-capital.png" alt="Aditya Birla Capital"></li>
+																			<li class="grid-item"><img src="/images/awardees/infibeam-avenues.png" alt="Infibeam Avenues"></li>
+																			<li class="grid-item"><img src="/images/awardees/bajaj-finserv.png" alt="Bajaj Finserv"></li>
+																			<li class="grid-item"><img src="/images/awardees/scripbox.png" alt="Scripbox"></li>
+																			<li class="grid-item"><img src="/images/awardees/oxigen.png" alt="Oxigen"></li>
+																			<li class="grid-item"><img src="/images/awardees/suvidhaa.png" alt="Suvidhaa"></li>
+																			<li class="grid-item"><img src="/images/awardees/hitachi.png" alt="Hitachi"></li>
+																			<li class="grid-item"><img src="/images/awardees/itz-cash.png" alt="Itz Cash"></li>
+																			<li class="grid-item"><img src="/images/awardees/ujjivan-financial-services.png" alt="Ujjivan Financial Service Private Limited"></li>
+																	</ul>
+															</div>
+															<div class="toggle awardee awardee-exchanges">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/bse.png" alt="BSE Limited"></li>
+																			<li class="grid-item"><img src="/images/awardees/nse.png" alt="NSE Limited"></li>
+																			<li class="grid-item"><img src="/images/awardees/nsdl.png" alt="NSD Limited"></li>
+																			<li class="grid-item"><img src="/images/awardees/mcx.png" alt="MCX Limited"></li>
+																	</ul>
+															</div>
+															<div class="toggle awardee awardee-financial-services">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/npci.png" alt="National Payments Corporation of India (NPCI)"></li>
+																			<li class="grid-item"><img src="/images/awardees/mahindra-home-finance.png" alt="Mahindra Rural Housing Finance Limited"></li>
+																			<li class="grid-item"><img src="/images/awardees/reliance-capital.png" alt="Reliance Capital Asset Management"></li>
+							<li class="grid-item"><img src="/images/awardees/religare.png" alt="Religare Health Insurance"></li>
+																			<li class="grid-item"><img src="/images/awardees/indiabulls.png" alt="Indiabulls Housing Finance Limited"></li>
+																			<li class="grid-item"><img src="/images/awardees/srg-housing-finance.png" alt="SRG Housing Finance Ltd"></li>
+																			<li class="grid-item"><img src="/images/awardees/yes-securities.png" alt="Yes Securities"></li>
+																	</ul>
+															</div>
+															<div class="toggle awardee awardee-insurance">
+																	<ul class="awardees-grid grid-3 grid-sm-3 grid-md-6 mb-0 justify-content-center">
+																			<li class="grid-item"><img src="/images/awardees/sbi-life-insurance.png" alt="SBI Life Insurance"></li>
+																			<li class="grid-item"><img src="/images/awardees/lic.png" alt="Life Insurance Corporation of India"></li>
+																			<li class="grid-item"><img src="/images/awardees/reliance-insurance.png" alt="Reliance Insurance"></li>
+																			<li class="grid-item"><img src="/images/awardees/hdfc-ergo.png" alt="HDFC Ergo Life Insurance"></li>
+																			<li class="grid-item"><img src="/images/awardees/aditya-birla-health.png" alt="Aditya Birla Health Insurance Company"></li>
+																			<li class="grid-item"><img src="/images/awardees/go-digit.png" alt="Go Digital General Insurance"></li>
+																	</ul>
+															</div>
+													</div>
+											</div>
+											<h5 class="fw-normal text-black-50 mb-0">* These are some of the past awardees. Full list can be viewed at <a href="https://award.skoch.in/past-awards/"><u>Past SKOCH Awards</u></a> page.</h5>
+									</div>
+							</div>
+					</div>
 
 				<div class="line line-sm my-0 clearfix"></div>
 				<div class="clear"></div>
@@ -651,6 +730,21 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="/js/functions.js"></script>
+
+	<script>
+
+		$(document).ready(function() {
+
+			jQuery('.block-expand-categories').find('.expand-category').on( 'click', function() {
+				let category = $(this);
+
+				category.siblings().removeClass('active');
+				category.addClass('active');
+			});
+
+		});
+
+	</script>
 
 	<script>
 		jQuery(document).ready( function($){
